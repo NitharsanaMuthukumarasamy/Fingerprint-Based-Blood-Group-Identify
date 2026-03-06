@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Admin Records</title>
+  <link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+  <h1>Admin Panel</h1>
+  <table border="1">
+    <tr>
+      <th>Name</th>
+      <th>DOB</th>
+      <th>Blood Group</th>
+      <th>Confidence</th>
+      <th>Timestamp</th>
+      <th>Image</th>
+    </tr>
+    {% for record in records %}
+    <tr>
+      <td>{{ record.name }}</td>
+      <td>{{ record.dob }}</td>
+      <td>{{ record.blood_group }}</td>
+      <td>{{ record.confidence }}</td>
+      <td>{{ record.timestamp }}</td>
+      <td><img src="/uploads/{{ record.image }}" width="80"></td>
+    </tr>
+    {% endfor %}
+  </table>
+  <br>
+  <a href="/">Back to Home</a>
+</body>
+</html>

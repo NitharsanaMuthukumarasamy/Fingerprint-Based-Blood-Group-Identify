@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Prediction Result</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <div class="container">
+        <h2>Prediction Result</h2>
+        <p><strong>Name:</strong> {{ name }}</p>
+        <p><strong>Date of Birth:</strong> {{ dob }}</p>
+        <p><strong>Blood Group:</strong> {{ blood_group }}</p>
+        <p><strong>Confidence:</strong> {{ confidence }}%</p>
+        <img src="{{ image_path }}" alt="Uploaded Image" class="preview-img">
+        <br><a href="/" class="btn">Try Another</a>
+    </div>
+</body>
+</html>
